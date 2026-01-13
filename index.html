@@ -342,6 +342,28 @@ header {
 <div class="signature">Lớp Anh thầy Kết</div>
 <div id="fullResult"></div>
 
+<script>
+const selectEl = document.getElementById("wordList");
+
+// Hàm sắp xếp options theo alphabet A-Z
+function sortOptionsAZ() {
+  const opts = Array.from(selectEl.options);
+
+  opts.sort((a, b) => a.text.localeCompare(b.text));
+
+  selectEl.innerHTML = "";
+  opts.forEach(o => selectEl.appendChild(o));
+}
+
+// Sắp xếp lần đầu khi load
+sortOptionsAZ();
+
+// Sắp xếp lại mỗi lần bấm mở dropdown (desktop + mobile đều nhận)
+selectEl.addEventListener("mousedown", sortOptionsAZ);
+selectEl.addEventListener("touchstart", sortOptionsAZ);
+</script>
+
+
 </body>
 </html>
 <script>
