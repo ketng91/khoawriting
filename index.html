@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vietnamese to English Practice - Khoá Writing</title>
+<title>Khoá Writing - Lớp Anh thầy Kết</title>
 
 <!-- Font Awesome cho icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -24,17 +24,16 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
   background-color: #ffd6ba;
-  color: 7a4e3e;
+  color: #7a4e3e;
   display: flex;
+  flex-wrap: wrap;  /* cho phép xuống dòng khi màn hình nhỏ */
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 10px 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   z-index: 1000;
   font-family: Arial, sans-serif;
-  
 }
 
 /* Left side */
@@ -58,11 +57,67 @@ header {
 
 /* Center title */
 .header-center {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
-  flex: 1;
-margin-left: -4cm;
+  flex: 1 1 100%; /* chiếm hết dòng khi cần, giúp responsive */
+  margin: 10px 0 0 0;
+}
+
+/* ====== CHỈNH CHO MOBILE ===== */
+@media (max-width: 480px) {
+  body {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  /* Câu VN/EN co vừa màn hình */
+  .sentence {
+    font-size: 18px;
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+
+  /* Input row co vừa màn hình */
+  .input-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+  }
+  .input-row input {
+    width: 100%;
+    font-size: 18px;
+  }
+  .input-row button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* Full answer textarea co vừa màn hình */
+  .full-answer-box {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  /* Buttons co vừa màn hình */
+  button {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  /* Header center giảm chữ */
+  .header-center {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  .header-left {
+    font-size: 16px;
+  }
+  .header-left i {
+    font-size: 20px;
+  }
 }
 
 /* Optional: hover effect */
@@ -120,10 +175,10 @@ margin-left: -4cm;
   font-size: 25px;
   font-family: Arial; 
   color: blue;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  border-radius: 10px;
+  border: 5px solid #ccc;
 }
-.full-submit { padding: 6px 12px; }
+.full-submit { padding: 10px 12px; }
 
 /* ====== BUTTONS ===== */
 button { 
