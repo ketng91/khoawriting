@@ -166,16 +166,25 @@ header {
 
 /* ====== BUTTONS ===== */
 button { 
-  padding: 8px 0;          /* khoảng cách trên/dưới */
+   padding: 8px 0;
   margin-right: 10px; 
   cursor: pointer; 
   border-radius: 5px;
   border: none;
+  background-color: #a0e7e5; 
   font-size: 16px;
-  width: 140px;            /* cố định độ rộng */
-  white-space: nowrap;      /* tránh xuống dòng */
+  width: 140px;
+  white-space: nowrap;
   text-align: center;
+  transition: background-color 0.25s ease, transform 0.2s ease;
 }
+button:hover,
+button:active {
+  background-color: #ffb3ba;
+  transform: translateY(-2px);
+}
+
+
 .green { background: lightgreen; }
 .blue { background: lightblue; }
 .yellow { background: khaki; }
@@ -283,14 +292,12 @@ header {
   }
 
  button {
-  width: 140px;             /* không full width */
-  font-size: 14px;         /* font nhỏ hơn cho mobile */
-  margin-bottom: 5px; 
-  margin-left: 0;      /* đảm bảo không thụt vào */
-     
-}
-
-
+   width: 140px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    background-color: #a0e7e5;
+    margin-left: 0;
+  }
   .signature {
     font-size: 16px;
     text-align: right;
